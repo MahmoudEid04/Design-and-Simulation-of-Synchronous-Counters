@@ -1,0 +1,72 @@
+|MOD60
+BQ0 <= BCD:inst.BQ0
+Clock => clock1Hz:inst2.clk
+BQ1 <= BCD:inst.BQ1
+BQ2 <= BCD:inst.BQ2
+BQ3 <= BCD:inst.BQ3
+Q0 <= MOD6:inst1.Q0
+Q1 <= MOD6:inst1.Q1
+Q2 <= MOD6:inst1.Q2
+
+
+|MOD60|BCD:inst
+CLKOUT <= CLK.DB_MAX_OUTPUT_PORT_TYPE
+CLK => CLKOUT.DATAIN
+CLK => 0.CLK
+CLK => 1.CLK
+CLK => 2.CLK
+CLK => 3.CLK
+BQ3 <= 3.DB_MAX_OUTPUT_PORT_TYPE
+RESETBCD => 3.ACLR
+RESETBCD => 0.ACLR
+RESETBCD => 1.ACLR
+RESETBCD => 2.ACLR
+BQ2 <= 2.DB_MAX_OUTPUT_PORT_TYPE
+BQ1 <= 1.DB_MAX_OUTPUT_PORT_TYPE
+BQ0 <= 0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MOD60|clock1Hz:inst2
+clk => temp_out.CLK
+clk => int_counter[0].CLK
+clk => int_counter[1].CLK
+clk => int_counter[2].CLK
+clk => int_counter[3].CLK
+clk => int_counter[4].CLK
+clk => int_counter[5].CLK
+clk => int_counter[6].CLK
+clk => int_counter[7].CLK
+clk => int_counter[8].CLK
+clk => int_counter[9].CLK
+clk => int_counter[10].CLK
+clk => int_counter[11].CLK
+clk => int_counter[12].CLK
+clk => int_counter[13].CLK
+clk => int_counter[14].CLK
+clk => int_counter[15].CLK
+clk => int_counter[16].CLK
+clk => int_counter[17].CLK
+clk => int_counter[18].CLK
+clk => int_counter[19].CLK
+clk => int_counter[20].CLK
+clk => int_counter[21].CLK
+clk => int_counter[22].CLK
+clk => int_counter[23].CLK
+clk => int_counter[24].CLK
+clk => int_counter[25].CLK
+clk => reset.CLK
+clk1Hz <= temp_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MOD60|MOD6:inst1
+Q0 <= JK0.DB_MAX_OUTPUT_PORT_TYPE
+RESET => JK0.ACLR
+RESET => JK1.ACLR
+RESET => iJK2.ACLR
+CCLK => JK0.CLK
+CCLK => iJK2.CLK
+CCLK => JK1.CLK
+Q1 <= JK1.DB_MAX_OUTPUT_PORT_TYPE
+Q2 <= iJK2.DB_MAX_OUTPUT_PORT_TYPE
+
+

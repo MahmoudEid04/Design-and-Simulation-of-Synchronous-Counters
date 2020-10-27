@@ -1,0 +1,45 @@
+|4bit_bcd_counterCLK
+CLKOUT <= clock1Hz:inst11.clk1Hz
+CLK => clock1Hz:inst11.clk
+BQ3 <= 3.DB_MAX_OUTPUT_PORT_TYPE
+RESETBCD => 3.ACLR
+RESETBCD => 0.ACLR
+RESETBCD => 1.ACLR
+RESETBCD => 2.ACLR
+BQ2 <= 2.DB_MAX_OUTPUT_PORT_TYPE
+BQ1 <= 1.DB_MAX_OUTPUT_PORT_TYPE
+BQ0 <= 0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|4bit_bcd_counterCLK|clock1Hz:inst11
+clk => temp_out.CLK
+clk => int_counter[0].CLK
+clk => int_counter[1].CLK
+clk => int_counter[2].CLK
+clk => int_counter[3].CLK
+clk => int_counter[4].CLK
+clk => int_counter[5].CLK
+clk => int_counter[6].CLK
+clk => int_counter[7].CLK
+clk => int_counter[8].CLK
+clk => int_counter[9].CLK
+clk => int_counter[10].CLK
+clk => int_counter[11].CLK
+clk => int_counter[12].CLK
+clk => int_counter[13].CLK
+clk => int_counter[14].CLK
+clk => int_counter[15].CLK
+clk => int_counter[16].CLK
+clk => int_counter[17].CLK
+clk => int_counter[18].CLK
+clk => int_counter[19].CLK
+clk => int_counter[20].CLK
+clk => int_counter[21].CLK
+clk => int_counter[22].CLK
+clk => int_counter[23].CLK
+clk => int_counter[24].CLK
+clk => int_counter[25].CLK
+clk => reset.CLK
+clk1Hz <= temp_out.DB_MAX_OUTPUT_PORT_TYPE
+
+

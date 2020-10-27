@@ -1,0 +1,423 @@
+Simulator report for BCD_qsim
+Mon Oct 05 22:59:44 2020
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 1.0 us       ;
+; Simulation Netlist Size     ; 141 nodes    ;
+; Simulation Coverage         ;      13.48 % ;
+; Total Number of Transitions ; 522          ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Cyclone III  ;
++-----------------------------+--------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                                             ;
++--------------------------------------------------------------------------------------------+-----------------------------------+---------------+
+; Option                                                                                     ; Setting                           ; Default Value ;
++--------------------------------------------------------------------------------------------+-----------------------------------+---------------+
+; Simulation mode                                                                            ; Functional                        ; Timing        ;
+; Start time                                                                                 ; 0 ns                              ; 0 ns          ;
+; Simulation results format                                                                  ; VWF                               ;               ;
+; Vector input source                                                                        ; H:/CEG2136/LAB2/WaveformMOD60.vwf ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On                                ; On            ;
+; Check outputs                                                                              ; Off                               ; Off           ;
+; Report simulation coverage                                                                 ; On                                ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On                                ; On            ;
+; Display missing 1-value coverage report                                                    ; On                                ; On            ;
+; Display missing 0-value coverage report                                                    ; On                                ; On            ;
+; Detect setup and hold time violations                                                      ; Off                               ; Off           ;
+; Detect glitches                                                                            ; Off                               ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off                               ; Off           ;
+; Generate Signal Activity File                                                              ; Off                               ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off                               ; Off           ;
+; Group bus channels in simulation results                                                   ; Off                               ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On                                ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE                        ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off                               ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off                               ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto                              ; Auto          ;
+; Interconnect Delay Model Type                                                              ; Transport                         ; Transport     ;
+; Cell Delay Model Type                                                                      ; Transport                         ; Transport     ;
++--------------------------------------------------------------------------------------------+-----------------------------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II 64-Bit to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      13.48 % ;
+; Total nodes checked                                 ; 141          ;
+; Total output ports checked                          ; 141          ;
+; Total output ports with complete 1/0-value coverage ; 19           ;
+; Total output ports with no 1/0-value coverage       ; 118          ;
+; Total output ports with no 1-value coverage         ; 119          ;
+; Total output ports with no 0-value coverage         ; 121          ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++------------------------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                                    ;
++--------------------------------------+--------------------------------------+------------------+
+; Node Name                            ; Output Port Name                     ; Output Port Type ;
++--------------------------------------+--------------------------------------+------------------+
+; |MOD60|Clock                         ; |MOD60|Clock                         ; out              ;
+; |MOD60|clock1Hz:inst2|int_counter[1] ; |MOD60|clock1Hz:inst2|int_counter[1] ; regout           ;
+; |MOD60|clock1Hz:inst2|int_counter[0] ; |MOD60|clock1Hz:inst2|int_counter[0] ; regout           ;
+; |MOD60|clock1Hz:inst2|int_counter~21 ; |MOD60|clock1Hz:inst2|int_counter~21 ; out              ;
+; |MOD60|clock1Hz:inst2|int_counter~22 ; |MOD60|clock1Hz:inst2|int_counter~22 ; out              ;
+; |MOD60|clock1Hz:inst2|int_counter~23 ; |MOD60|clock1Hz:inst2|int_counter~23 ; out              ;
+; |MOD60|clock1Hz:inst2|int_counter~24 ; |MOD60|clock1Hz:inst2|int_counter~24 ; out              ;
+; |MOD60|clock1Hz:inst2|int_counter~25 ; |MOD60|clock1Hz:inst2|int_counter~25 ; out              ;
+; |MOD60|clock1Hz:inst2|int_counter[2] ; |MOD60|clock1Hz:inst2|int_counter[2] ; regout           ;
+; |MOD60|clock1Hz:inst2|int_counter[3] ; |MOD60|clock1Hz:inst2|int_counter[3] ; regout           ;
+; |MOD60|clock1Hz:inst2|int_counter[4] ; |MOD60|clock1Hz:inst2|int_counter[4] ; regout           ;
+; |MOD60|clock1Hz:inst2|Add0~0         ; |MOD60|clock1Hz:inst2|Add0~0         ; out0             ;
+; |MOD60|clock1Hz:inst2|Add0~1         ; |MOD60|clock1Hz:inst2|Add0~1         ; out0             ;
+; |MOD60|clock1Hz:inst2|Add0~2         ; |MOD60|clock1Hz:inst2|Add0~2         ; out0             ;
+; |MOD60|clock1Hz:inst2|Add0~3         ; |MOD60|clock1Hz:inst2|Add0~3         ; out0             ;
+; |MOD60|clock1Hz:inst2|Add0~4         ; |MOD60|clock1Hz:inst2|Add0~4         ; out0             ;
+; |MOD60|clock1Hz:inst2|Add0~5         ; |MOD60|clock1Hz:inst2|Add0~5         ; out0             ;
+; |MOD60|clock1Hz:inst2|Add0~6         ; |MOD60|clock1Hz:inst2|Add0~6         ; out0             ;
+; |MOD60|clock1Hz:inst2|Add0~7         ; |MOD60|clock1Hz:inst2|Add0~7         ; out0             ;
++--------------------------------------+--------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++--------------------------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                                         ;
++---------------------------------------+---------------------------------------+------------------+
+; Node Name                             ; Output Port Name                      ; Output Port Type ;
++---------------------------------------+---------------------------------------+------------------+
+; |MOD60|BQ0                            ; |MOD60|BQ0                            ; pin_out          ;
+; |MOD60|BQ1                            ; |MOD60|BQ1                            ; pin_out          ;
+; |MOD60|BQ2                            ; |MOD60|BQ2                            ; pin_out          ;
+; |MOD60|BQ3                            ; |MOD60|BQ3                            ; pin_out          ;
+; |MOD60|Q0                             ; |MOD60|Q0                             ; pin_out          ;
+; |MOD60|Q1                             ; |MOD60|Q1                             ; pin_out          ;
+; |MOD60|Q2                             ; |MOD60|Q2                             ; pin_out          ;
+; |MOD60|MOD6:inst1|JK0                 ; |MOD60|MOD6:inst1|JK0                 ; regout           ;
+; |MOD60|MOD6:inst1|JK1                 ; |MOD60|MOD6:inst1|JK1                 ; regout           ;
+; |MOD60|MOD6:inst1|JK1~0               ; |MOD60|MOD6:inst1|JK1~0               ; out0             ;
+; |MOD60|MOD6:inst1|JK1~1               ; |MOD60|MOD6:inst1|JK1~1               ; out0             ;
+; |MOD60|MOD6:inst1|JK1~2               ; |MOD60|MOD6:inst1|JK1~2               ; out0             ;
+; |MOD60|MOD6:inst1|inst7               ; |MOD60|MOD6:inst1|inst7               ; out0             ;
+; |MOD60|MOD6:inst1|iJK2                ; |MOD60|MOD6:inst1|iJK2                ; regout           ;
+; |MOD60|MOD6:inst1|iJK2~0              ; |MOD60|MOD6:inst1|iJK2~0              ; out0             ;
+; |MOD60|MOD6:inst1|iJK2~1              ; |MOD60|MOD6:inst1|iJK2~1              ; out0             ;
+; |MOD60|MOD6:inst1|iJK2~2              ; |MOD60|MOD6:inst1|iJK2~2              ; out0             ;
+; |MOD60|MOD6:inst1|inst4               ; |MOD60|MOD6:inst1|inst4               ; out0             ;
+; |MOD60|clock1Hz:inst2|temp_out        ; |MOD60|clock1Hz:inst2|temp_out        ; regout           ;
+; |MOD60|clock1Hz:inst2|temp_out~0      ; |MOD60|clock1Hz:inst2|temp_out~0      ; out              ;
+; |MOD60|clock1Hz:inst2|int_counter~0   ; |MOD60|clock1Hz:inst2|int_counter~0   ; out              ;
+; |MOD60|clock1Hz:inst2|int_counter~1   ; |MOD60|clock1Hz:inst2|int_counter~1   ; out              ;
+; |MOD60|clock1Hz:inst2|int_counter~2   ; |MOD60|clock1Hz:inst2|int_counter~2   ; out              ;
+; |MOD60|clock1Hz:inst2|int_counter~3   ; |MOD60|clock1Hz:inst2|int_counter~3   ; out              ;
+; |MOD60|clock1Hz:inst2|int_counter~4   ; |MOD60|clock1Hz:inst2|int_counter~4   ; out              ;
+; |MOD60|clock1Hz:inst2|int_counter~5   ; |MOD60|clock1Hz:inst2|int_counter~5   ; out              ;
+; |MOD60|clock1Hz:inst2|int_counter~6   ; |MOD60|clock1Hz:inst2|int_counter~6   ; out              ;
+; |MOD60|clock1Hz:inst2|int_counter~7   ; |MOD60|clock1Hz:inst2|int_counter~7   ; out              ;
+; |MOD60|clock1Hz:inst2|int_counter~8   ; |MOD60|clock1Hz:inst2|int_counter~8   ; out              ;
+; |MOD60|clock1Hz:inst2|int_counter~9   ; |MOD60|clock1Hz:inst2|int_counter~9   ; out              ;
+; |MOD60|clock1Hz:inst2|int_counter~10  ; |MOD60|clock1Hz:inst2|int_counter~10  ; out              ;
+; |MOD60|clock1Hz:inst2|int_counter~11  ; |MOD60|clock1Hz:inst2|int_counter~11  ; out              ;
+; |MOD60|clock1Hz:inst2|int_counter~12  ; |MOD60|clock1Hz:inst2|int_counter~12  ; out              ;
+; |MOD60|clock1Hz:inst2|int_counter~13  ; |MOD60|clock1Hz:inst2|int_counter~13  ; out              ;
+; |MOD60|clock1Hz:inst2|int_counter~14  ; |MOD60|clock1Hz:inst2|int_counter~14  ; out              ;
+; |MOD60|clock1Hz:inst2|int_counter~15  ; |MOD60|clock1Hz:inst2|int_counter~15  ; out              ;
+; |MOD60|clock1Hz:inst2|int_counter~16  ; |MOD60|clock1Hz:inst2|int_counter~16  ; out              ;
+; |MOD60|clock1Hz:inst2|int_counter~17  ; |MOD60|clock1Hz:inst2|int_counter~17  ; out              ;
+; |MOD60|clock1Hz:inst2|int_counter~18  ; |MOD60|clock1Hz:inst2|int_counter~18  ; out              ;
+; |MOD60|clock1Hz:inst2|int_counter~19  ; |MOD60|clock1Hz:inst2|int_counter~19  ; out              ;
+; |MOD60|clock1Hz:inst2|temp_out~1      ; |MOD60|clock1Hz:inst2|temp_out~1      ; out              ;
+; |MOD60|clock1Hz:inst2|int_counter[6]  ; |MOD60|clock1Hz:inst2|int_counter[6]  ; regout           ;
+; |MOD60|clock1Hz:inst2|int_counter[7]  ; |MOD60|clock1Hz:inst2|int_counter[7]  ; regout           ;
+; |MOD60|clock1Hz:inst2|int_counter[8]  ; |MOD60|clock1Hz:inst2|int_counter[8]  ; regout           ;
+; |MOD60|clock1Hz:inst2|int_counter[9]  ; |MOD60|clock1Hz:inst2|int_counter[9]  ; regout           ;
+; |MOD60|clock1Hz:inst2|int_counter[10] ; |MOD60|clock1Hz:inst2|int_counter[10] ; regout           ;
+; |MOD60|clock1Hz:inst2|int_counter[11] ; |MOD60|clock1Hz:inst2|int_counter[11] ; regout           ;
+; |MOD60|clock1Hz:inst2|int_counter[12] ; |MOD60|clock1Hz:inst2|int_counter[12] ; regout           ;
+; |MOD60|clock1Hz:inst2|int_counter[13] ; |MOD60|clock1Hz:inst2|int_counter[13] ; regout           ;
+; |MOD60|clock1Hz:inst2|int_counter[14] ; |MOD60|clock1Hz:inst2|int_counter[14] ; regout           ;
+; |MOD60|clock1Hz:inst2|int_counter[15] ; |MOD60|clock1Hz:inst2|int_counter[15] ; regout           ;
+; |MOD60|clock1Hz:inst2|int_counter[16] ; |MOD60|clock1Hz:inst2|int_counter[16] ; regout           ;
+; |MOD60|clock1Hz:inst2|int_counter[17] ; |MOD60|clock1Hz:inst2|int_counter[17] ; regout           ;
+; |MOD60|clock1Hz:inst2|int_counter[18] ; |MOD60|clock1Hz:inst2|int_counter[18] ; regout           ;
+; |MOD60|clock1Hz:inst2|int_counter[19] ; |MOD60|clock1Hz:inst2|int_counter[19] ; regout           ;
+; |MOD60|clock1Hz:inst2|int_counter[20] ; |MOD60|clock1Hz:inst2|int_counter[20] ; regout           ;
+; |MOD60|clock1Hz:inst2|int_counter[21] ; |MOD60|clock1Hz:inst2|int_counter[21] ; regout           ;
+; |MOD60|clock1Hz:inst2|int_counter[22] ; |MOD60|clock1Hz:inst2|int_counter[22] ; regout           ;
+; |MOD60|clock1Hz:inst2|int_counter[23] ; |MOD60|clock1Hz:inst2|int_counter[23] ; regout           ;
+; |MOD60|clock1Hz:inst2|int_counter[24] ; |MOD60|clock1Hz:inst2|int_counter[24] ; regout           ;
+; |MOD60|clock1Hz:inst2|int_counter[25] ; |MOD60|clock1Hz:inst2|int_counter[25] ; regout           ;
+; |MOD60|clock1Hz:inst2|reset           ; |MOD60|clock1Hz:inst2|reset           ; regout           ;
+; |MOD60|BCD:inst|3                     ; |MOD60|BCD:inst|3                     ; regout           ;
+; |MOD60|BCD:inst|3~0                   ; |MOD60|BCD:inst|3~0                   ; out0             ;
+; |MOD60|BCD:inst|3~1                   ; |MOD60|BCD:inst|3~1                   ; out0             ;
+; |MOD60|BCD:inst|3~2                   ; |MOD60|BCD:inst|3~2                   ; out0             ;
+; |MOD60|BCD:inst|0                     ; |MOD60|BCD:inst|0                     ; regout           ;
+; |MOD60|BCD:inst|inst6                 ; |MOD60|BCD:inst|inst6                 ; out0             ;
+; |MOD60|BCD:inst|1                     ; |MOD60|BCD:inst|1                     ; regout           ;
+; |MOD60|BCD:inst|1~0                   ; |MOD60|BCD:inst|1~0                   ; out0             ;
+; |MOD60|BCD:inst|1~1                   ; |MOD60|BCD:inst|1~1                   ; out0             ;
+; |MOD60|BCD:inst|1~2                   ; |MOD60|BCD:inst|1~2                   ; out0             ;
+; |MOD60|BCD:inst|inst0                 ; |MOD60|BCD:inst|inst0                 ; out0             ;
+; |MOD60|BCD:inst|2                     ; |MOD60|BCD:inst|2                     ; regout           ;
+; |MOD60|BCD:inst|2~0                   ; |MOD60|BCD:inst|2~0                   ; out0             ;
+; |MOD60|BCD:inst|2~1                   ; |MOD60|BCD:inst|2~1                   ; out0             ;
+; |MOD60|BCD:inst|2~2                   ; |MOD60|BCD:inst|2~2                   ; out0             ;
+; |MOD60|BCD:inst|inst07                ; |MOD60|BCD:inst|inst07                ; out0             ;
+; |MOD60|clock1Hz:inst2|Add0~9          ; |MOD60|clock1Hz:inst2|Add0~9          ; out0             ;
+; |MOD60|clock1Hz:inst2|Add0~10         ; |MOD60|clock1Hz:inst2|Add0~10         ; out0             ;
+; |MOD60|clock1Hz:inst2|Add0~11         ; |MOD60|clock1Hz:inst2|Add0~11         ; out0             ;
+; |MOD60|clock1Hz:inst2|Add0~12         ; |MOD60|clock1Hz:inst2|Add0~12         ; out0             ;
+; |MOD60|clock1Hz:inst2|Add0~13         ; |MOD60|clock1Hz:inst2|Add0~13         ; out0             ;
+; |MOD60|clock1Hz:inst2|Add0~14         ; |MOD60|clock1Hz:inst2|Add0~14         ; out0             ;
+; |MOD60|clock1Hz:inst2|Add0~15         ; |MOD60|clock1Hz:inst2|Add0~15         ; out0             ;
+; |MOD60|clock1Hz:inst2|Add0~16         ; |MOD60|clock1Hz:inst2|Add0~16         ; out0             ;
+; |MOD60|clock1Hz:inst2|Add0~17         ; |MOD60|clock1Hz:inst2|Add0~17         ; out0             ;
+; |MOD60|clock1Hz:inst2|Add0~18         ; |MOD60|clock1Hz:inst2|Add0~18         ; out0             ;
+; |MOD60|clock1Hz:inst2|Add0~19         ; |MOD60|clock1Hz:inst2|Add0~19         ; out0             ;
+; |MOD60|clock1Hz:inst2|Add0~20         ; |MOD60|clock1Hz:inst2|Add0~20         ; out0             ;
+; |MOD60|clock1Hz:inst2|Add0~21         ; |MOD60|clock1Hz:inst2|Add0~21         ; out0             ;
+; |MOD60|clock1Hz:inst2|Add0~22         ; |MOD60|clock1Hz:inst2|Add0~22         ; out0             ;
+; |MOD60|clock1Hz:inst2|Add0~23         ; |MOD60|clock1Hz:inst2|Add0~23         ; out0             ;
+; |MOD60|clock1Hz:inst2|Add0~24         ; |MOD60|clock1Hz:inst2|Add0~24         ; out0             ;
+; |MOD60|clock1Hz:inst2|Add0~25         ; |MOD60|clock1Hz:inst2|Add0~25         ; out0             ;
+; |MOD60|clock1Hz:inst2|Add0~26         ; |MOD60|clock1Hz:inst2|Add0~26         ; out0             ;
+; |MOD60|clock1Hz:inst2|Add0~27         ; |MOD60|clock1Hz:inst2|Add0~27         ; out0             ;
+; |MOD60|clock1Hz:inst2|Add0~28         ; |MOD60|clock1Hz:inst2|Add0~28         ; out0             ;
+; |MOD60|clock1Hz:inst2|Add0~29         ; |MOD60|clock1Hz:inst2|Add0~29         ; out0             ;
+; |MOD60|clock1Hz:inst2|Add0~30         ; |MOD60|clock1Hz:inst2|Add0~30         ; out0             ;
+; |MOD60|clock1Hz:inst2|Add0~31         ; |MOD60|clock1Hz:inst2|Add0~31         ; out0             ;
+; |MOD60|clock1Hz:inst2|Add0~32         ; |MOD60|clock1Hz:inst2|Add0~32         ; out0             ;
+; |MOD60|clock1Hz:inst2|Add0~33         ; |MOD60|clock1Hz:inst2|Add0~33         ; out0             ;
+; |MOD60|clock1Hz:inst2|Add0~34         ; |MOD60|clock1Hz:inst2|Add0~34         ; out0             ;
+; |MOD60|clock1Hz:inst2|Add0~35         ; |MOD60|clock1Hz:inst2|Add0~35         ; out0             ;
+; |MOD60|clock1Hz:inst2|Add0~36         ; |MOD60|clock1Hz:inst2|Add0~36         ; out0             ;
+; |MOD60|clock1Hz:inst2|Add0~37         ; |MOD60|clock1Hz:inst2|Add0~37         ; out0             ;
+; |MOD60|clock1Hz:inst2|Add0~38         ; |MOD60|clock1Hz:inst2|Add0~38         ; out0             ;
+; |MOD60|clock1Hz:inst2|Add0~39         ; |MOD60|clock1Hz:inst2|Add0~39         ; out0             ;
+; |MOD60|clock1Hz:inst2|Add0~40         ; |MOD60|clock1Hz:inst2|Add0~40         ; out0             ;
+; |MOD60|clock1Hz:inst2|Add0~41         ; |MOD60|clock1Hz:inst2|Add0~41         ; out0             ;
+; |MOD60|clock1Hz:inst2|Add0~42         ; |MOD60|clock1Hz:inst2|Add0~42         ; out0             ;
+; |MOD60|clock1Hz:inst2|Add0~43         ; |MOD60|clock1Hz:inst2|Add0~43         ; out0             ;
+; |MOD60|clock1Hz:inst2|Add0~44         ; |MOD60|clock1Hz:inst2|Add0~44         ; out0             ;
+; |MOD60|clock1Hz:inst2|Add0~45         ; |MOD60|clock1Hz:inst2|Add0~45         ; out0             ;
+; |MOD60|clock1Hz:inst2|Add0~46         ; |MOD60|clock1Hz:inst2|Add0~46         ; out0             ;
+; |MOD60|clock1Hz:inst2|Add0~47         ; |MOD60|clock1Hz:inst2|Add0~47         ; out0             ;
+; |MOD60|clock1Hz:inst2|Add0~48         ; |MOD60|clock1Hz:inst2|Add0~48         ; out0             ;
+; |MOD60|clock1Hz:inst2|Equal0~0        ; |MOD60|clock1Hz:inst2|Equal0~0        ; out0             ;
++---------------------------------------+---------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++--------------------------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                                         ;
++---------------------------------------+---------------------------------------+------------------+
+; Node Name                             ; Output Port Name                      ; Output Port Type ;
++---------------------------------------+---------------------------------------+------------------+
+; |MOD60|BQ0                            ; |MOD60|BQ0                            ; pin_out          ;
+; |MOD60|BQ1                            ; |MOD60|BQ1                            ; pin_out          ;
+; |MOD60|BQ2                            ; |MOD60|BQ2                            ; pin_out          ;
+; |MOD60|BQ3                            ; |MOD60|BQ3                            ; pin_out          ;
+; |MOD60|Q0                             ; |MOD60|Q0                             ; pin_out          ;
+; |MOD60|Q1                             ; |MOD60|Q1                             ; pin_out          ;
+; |MOD60|Q2                             ; |MOD60|Q2                             ; pin_out          ;
+; |MOD60|MOD6:inst1|JK0                 ; |MOD60|MOD6:inst1|JK0                 ; regout           ;
+; |MOD60|MOD6:inst1|JK1                 ; |MOD60|MOD6:inst1|JK1                 ; regout           ;
+; |MOD60|MOD6:inst1|JK1~0               ; |MOD60|MOD6:inst1|JK1~0               ; out0             ;
+; |MOD60|MOD6:inst1|JK1~1               ; |MOD60|MOD6:inst1|JK1~1               ; out0             ;
+; |MOD60|MOD6:inst1|JK1~2               ; |MOD60|MOD6:inst1|JK1~2               ; out0             ;
+; |MOD60|MOD6:inst1|inst7               ; |MOD60|MOD6:inst1|inst7               ; out0             ;
+; |MOD60|MOD6:inst1|iJK2                ; |MOD60|MOD6:inst1|iJK2                ; regout           ;
+; |MOD60|MOD6:inst1|iJK2~0              ; |MOD60|MOD6:inst1|iJK2~0              ; out0             ;
+; |MOD60|MOD6:inst1|iJK2~1              ; |MOD60|MOD6:inst1|iJK2~1              ; out0             ;
+; |MOD60|MOD6:inst1|iJK2~2              ; |MOD60|MOD6:inst1|iJK2~2              ; out0             ;
+; |MOD60|MOD6:inst1|inst4               ; |MOD60|MOD6:inst1|inst4               ; out0             ;
+; |MOD60|clock1Hz:inst2|temp_out        ; |MOD60|clock1Hz:inst2|temp_out        ; regout           ;
+; |MOD60|clock1Hz:inst2|temp_out~0      ; |MOD60|clock1Hz:inst2|temp_out~0      ; out              ;
+; |MOD60|clock1Hz:inst2|int_counter~0   ; |MOD60|clock1Hz:inst2|int_counter~0   ; out              ;
+; |MOD60|clock1Hz:inst2|int_counter~1   ; |MOD60|clock1Hz:inst2|int_counter~1   ; out              ;
+; |MOD60|clock1Hz:inst2|int_counter~2   ; |MOD60|clock1Hz:inst2|int_counter~2   ; out              ;
+; |MOD60|clock1Hz:inst2|int_counter~3   ; |MOD60|clock1Hz:inst2|int_counter~3   ; out              ;
+; |MOD60|clock1Hz:inst2|int_counter~4   ; |MOD60|clock1Hz:inst2|int_counter~4   ; out              ;
+; |MOD60|clock1Hz:inst2|int_counter~5   ; |MOD60|clock1Hz:inst2|int_counter~5   ; out              ;
+; |MOD60|clock1Hz:inst2|int_counter~6   ; |MOD60|clock1Hz:inst2|int_counter~6   ; out              ;
+; |MOD60|clock1Hz:inst2|int_counter~7   ; |MOD60|clock1Hz:inst2|int_counter~7   ; out              ;
+; |MOD60|clock1Hz:inst2|int_counter~8   ; |MOD60|clock1Hz:inst2|int_counter~8   ; out              ;
+; |MOD60|clock1Hz:inst2|int_counter~9   ; |MOD60|clock1Hz:inst2|int_counter~9   ; out              ;
+; |MOD60|clock1Hz:inst2|int_counter~10  ; |MOD60|clock1Hz:inst2|int_counter~10  ; out              ;
+; |MOD60|clock1Hz:inst2|int_counter~11  ; |MOD60|clock1Hz:inst2|int_counter~11  ; out              ;
+; |MOD60|clock1Hz:inst2|int_counter~12  ; |MOD60|clock1Hz:inst2|int_counter~12  ; out              ;
+; |MOD60|clock1Hz:inst2|int_counter~13  ; |MOD60|clock1Hz:inst2|int_counter~13  ; out              ;
+; |MOD60|clock1Hz:inst2|int_counter~14  ; |MOD60|clock1Hz:inst2|int_counter~14  ; out              ;
+; |MOD60|clock1Hz:inst2|int_counter~15  ; |MOD60|clock1Hz:inst2|int_counter~15  ; out              ;
+; |MOD60|clock1Hz:inst2|int_counter~16  ; |MOD60|clock1Hz:inst2|int_counter~16  ; out              ;
+; |MOD60|clock1Hz:inst2|int_counter~17  ; |MOD60|clock1Hz:inst2|int_counter~17  ; out              ;
+; |MOD60|clock1Hz:inst2|int_counter~18  ; |MOD60|clock1Hz:inst2|int_counter~18  ; out              ;
+; |MOD60|clock1Hz:inst2|int_counter~19  ; |MOD60|clock1Hz:inst2|int_counter~19  ; out              ;
+; |MOD60|clock1Hz:inst2|int_counter~20  ; |MOD60|clock1Hz:inst2|int_counter~20  ; out              ;
+; |MOD60|clock1Hz:inst2|temp_out~1      ; |MOD60|clock1Hz:inst2|temp_out~1      ; out              ;
+; |MOD60|clock1Hz:inst2|int_counter[5]  ; |MOD60|clock1Hz:inst2|int_counter[5]  ; regout           ;
+; |MOD60|clock1Hz:inst2|int_counter[6]  ; |MOD60|clock1Hz:inst2|int_counter[6]  ; regout           ;
+; |MOD60|clock1Hz:inst2|int_counter[7]  ; |MOD60|clock1Hz:inst2|int_counter[7]  ; regout           ;
+; |MOD60|clock1Hz:inst2|int_counter[8]  ; |MOD60|clock1Hz:inst2|int_counter[8]  ; regout           ;
+; |MOD60|clock1Hz:inst2|int_counter[9]  ; |MOD60|clock1Hz:inst2|int_counter[9]  ; regout           ;
+; |MOD60|clock1Hz:inst2|int_counter[10] ; |MOD60|clock1Hz:inst2|int_counter[10] ; regout           ;
+; |MOD60|clock1Hz:inst2|int_counter[11] ; |MOD60|clock1Hz:inst2|int_counter[11] ; regout           ;
+; |MOD60|clock1Hz:inst2|int_counter[12] ; |MOD60|clock1Hz:inst2|int_counter[12] ; regout           ;
+; |MOD60|clock1Hz:inst2|int_counter[13] ; |MOD60|clock1Hz:inst2|int_counter[13] ; regout           ;
+; |MOD60|clock1Hz:inst2|int_counter[14] ; |MOD60|clock1Hz:inst2|int_counter[14] ; regout           ;
+; |MOD60|clock1Hz:inst2|int_counter[15] ; |MOD60|clock1Hz:inst2|int_counter[15] ; regout           ;
+; |MOD60|clock1Hz:inst2|int_counter[16] ; |MOD60|clock1Hz:inst2|int_counter[16] ; regout           ;
+; |MOD60|clock1Hz:inst2|int_counter[17] ; |MOD60|clock1Hz:inst2|int_counter[17] ; regout           ;
+; |MOD60|clock1Hz:inst2|int_counter[18] ; |MOD60|clock1Hz:inst2|int_counter[18] ; regout           ;
+; |MOD60|clock1Hz:inst2|int_counter[19] ; |MOD60|clock1Hz:inst2|int_counter[19] ; regout           ;
+; |MOD60|clock1Hz:inst2|int_counter[20] ; |MOD60|clock1Hz:inst2|int_counter[20] ; regout           ;
+; |MOD60|clock1Hz:inst2|int_counter[21] ; |MOD60|clock1Hz:inst2|int_counter[21] ; regout           ;
+; |MOD60|clock1Hz:inst2|int_counter[22] ; |MOD60|clock1Hz:inst2|int_counter[22] ; regout           ;
+; |MOD60|clock1Hz:inst2|int_counter[23] ; |MOD60|clock1Hz:inst2|int_counter[23] ; regout           ;
+; |MOD60|clock1Hz:inst2|int_counter[24] ; |MOD60|clock1Hz:inst2|int_counter[24] ; regout           ;
+; |MOD60|clock1Hz:inst2|int_counter[25] ; |MOD60|clock1Hz:inst2|int_counter[25] ; regout           ;
+; |MOD60|BCD:inst|3                     ; |MOD60|BCD:inst|3                     ; regout           ;
+; |MOD60|BCD:inst|3~0                   ; |MOD60|BCD:inst|3~0                   ; out0             ;
+; |MOD60|BCD:inst|3~1                   ; |MOD60|BCD:inst|3~1                   ; out0             ;
+; |MOD60|BCD:inst|3~2                   ; |MOD60|BCD:inst|3~2                   ; out0             ;
+; |MOD60|BCD:inst|0                     ; |MOD60|BCD:inst|0                     ; regout           ;
+; |MOD60|BCD:inst|inst6                 ; |MOD60|BCD:inst|inst6                 ; out0             ;
+; |MOD60|BCD:inst|1                     ; |MOD60|BCD:inst|1                     ; regout           ;
+; |MOD60|BCD:inst|1~0                   ; |MOD60|BCD:inst|1~0                   ; out0             ;
+; |MOD60|BCD:inst|1~1                   ; |MOD60|BCD:inst|1~1                   ; out0             ;
+; |MOD60|BCD:inst|1~2                   ; |MOD60|BCD:inst|1~2                   ; out0             ;
+; |MOD60|BCD:inst|inst0                 ; |MOD60|BCD:inst|inst0                 ; out0             ;
+; |MOD60|BCD:inst|2                     ; |MOD60|BCD:inst|2                     ; regout           ;
+; |MOD60|BCD:inst|2~0                   ; |MOD60|BCD:inst|2~0                   ; out0             ;
+; |MOD60|BCD:inst|2~1                   ; |MOD60|BCD:inst|2~1                   ; out0             ;
+; |MOD60|BCD:inst|2~2                   ; |MOD60|BCD:inst|2~2                   ; out0             ;
+; |MOD60|BCD:inst|inst07                ; |MOD60|BCD:inst|inst07                ; out0             ;
+; |MOD60|clock1Hz:inst2|Add0~8          ; |MOD60|clock1Hz:inst2|Add0~8          ; out0             ;
+; |MOD60|clock1Hz:inst2|Add0~9          ; |MOD60|clock1Hz:inst2|Add0~9          ; out0             ;
+; |MOD60|clock1Hz:inst2|Add0~10         ; |MOD60|clock1Hz:inst2|Add0~10         ; out0             ;
+; |MOD60|clock1Hz:inst2|Add0~11         ; |MOD60|clock1Hz:inst2|Add0~11         ; out0             ;
+; |MOD60|clock1Hz:inst2|Add0~12         ; |MOD60|clock1Hz:inst2|Add0~12         ; out0             ;
+; |MOD60|clock1Hz:inst2|Add0~13         ; |MOD60|clock1Hz:inst2|Add0~13         ; out0             ;
+; |MOD60|clock1Hz:inst2|Add0~14         ; |MOD60|clock1Hz:inst2|Add0~14         ; out0             ;
+; |MOD60|clock1Hz:inst2|Add0~15         ; |MOD60|clock1Hz:inst2|Add0~15         ; out0             ;
+; |MOD60|clock1Hz:inst2|Add0~16         ; |MOD60|clock1Hz:inst2|Add0~16         ; out0             ;
+; |MOD60|clock1Hz:inst2|Add0~17         ; |MOD60|clock1Hz:inst2|Add0~17         ; out0             ;
+; |MOD60|clock1Hz:inst2|Add0~18         ; |MOD60|clock1Hz:inst2|Add0~18         ; out0             ;
+; |MOD60|clock1Hz:inst2|Add0~19         ; |MOD60|clock1Hz:inst2|Add0~19         ; out0             ;
+; |MOD60|clock1Hz:inst2|Add0~20         ; |MOD60|clock1Hz:inst2|Add0~20         ; out0             ;
+; |MOD60|clock1Hz:inst2|Add0~21         ; |MOD60|clock1Hz:inst2|Add0~21         ; out0             ;
+; |MOD60|clock1Hz:inst2|Add0~22         ; |MOD60|clock1Hz:inst2|Add0~22         ; out0             ;
+; |MOD60|clock1Hz:inst2|Add0~23         ; |MOD60|clock1Hz:inst2|Add0~23         ; out0             ;
+; |MOD60|clock1Hz:inst2|Add0~24         ; |MOD60|clock1Hz:inst2|Add0~24         ; out0             ;
+; |MOD60|clock1Hz:inst2|Add0~25         ; |MOD60|clock1Hz:inst2|Add0~25         ; out0             ;
+; |MOD60|clock1Hz:inst2|Add0~26         ; |MOD60|clock1Hz:inst2|Add0~26         ; out0             ;
+; |MOD60|clock1Hz:inst2|Add0~27         ; |MOD60|clock1Hz:inst2|Add0~27         ; out0             ;
+; |MOD60|clock1Hz:inst2|Add0~28         ; |MOD60|clock1Hz:inst2|Add0~28         ; out0             ;
+; |MOD60|clock1Hz:inst2|Add0~29         ; |MOD60|clock1Hz:inst2|Add0~29         ; out0             ;
+; |MOD60|clock1Hz:inst2|Add0~30         ; |MOD60|clock1Hz:inst2|Add0~30         ; out0             ;
+; |MOD60|clock1Hz:inst2|Add0~31         ; |MOD60|clock1Hz:inst2|Add0~31         ; out0             ;
+; |MOD60|clock1Hz:inst2|Add0~32         ; |MOD60|clock1Hz:inst2|Add0~32         ; out0             ;
+; |MOD60|clock1Hz:inst2|Add0~33         ; |MOD60|clock1Hz:inst2|Add0~33         ; out0             ;
+; |MOD60|clock1Hz:inst2|Add0~34         ; |MOD60|clock1Hz:inst2|Add0~34         ; out0             ;
+; |MOD60|clock1Hz:inst2|Add0~35         ; |MOD60|clock1Hz:inst2|Add0~35         ; out0             ;
+; |MOD60|clock1Hz:inst2|Add0~36         ; |MOD60|clock1Hz:inst2|Add0~36         ; out0             ;
+; |MOD60|clock1Hz:inst2|Add0~37         ; |MOD60|clock1Hz:inst2|Add0~37         ; out0             ;
+; |MOD60|clock1Hz:inst2|Add0~38         ; |MOD60|clock1Hz:inst2|Add0~38         ; out0             ;
+; |MOD60|clock1Hz:inst2|Add0~39         ; |MOD60|clock1Hz:inst2|Add0~39         ; out0             ;
+; |MOD60|clock1Hz:inst2|Add0~40         ; |MOD60|clock1Hz:inst2|Add0~40         ; out0             ;
+; |MOD60|clock1Hz:inst2|Add0~41         ; |MOD60|clock1Hz:inst2|Add0~41         ; out0             ;
+; |MOD60|clock1Hz:inst2|Add0~42         ; |MOD60|clock1Hz:inst2|Add0~42         ; out0             ;
+; |MOD60|clock1Hz:inst2|Add0~43         ; |MOD60|clock1Hz:inst2|Add0~43         ; out0             ;
+; |MOD60|clock1Hz:inst2|Add0~44         ; |MOD60|clock1Hz:inst2|Add0~44         ; out0             ;
+; |MOD60|clock1Hz:inst2|Add0~45         ; |MOD60|clock1Hz:inst2|Add0~45         ; out0             ;
+; |MOD60|clock1Hz:inst2|Add0~46         ; |MOD60|clock1Hz:inst2|Add0~46         ; out0             ;
+; |MOD60|clock1Hz:inst2|Add0~47         ; |MOD60|clock1Hz:inst2|Add0~47         ; out0             ;
+; |MOD60|clock1Hz:inst2|Add0~48         ; |MOD60|clock1Hz:inst2|Add0~48         ; out0             ;
+; |MOD60|clock1Hz:inst2|Equal0~0        ; |MOD60|clock1Hz:inst2|Equal0~0        ; out0             ;
++---------------------------------------+---------------------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Simulator
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Mon Oct 05 22:59:41 2020
+Info: Command: quartus_sim --simulation_results_format=VWF BCD -c BCD_qsim
+Info (324025): Using vector source file "H:/CEG2136/LAB2/WaveformMOD60.vwf"
+Info (310003): Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info (310004): Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info (310002): Simulation partitioned into 1 sub-simulations
+Info (328053): Simulation coverage is      13.48 %
+Info (328052): Number of transitions in simulation is 522
+Info (324045): Vector file BCD_qsim.sim.vwf is saved in VWF text format. You can compress it into CVWF format in order to reduce file size. For more details please refer to the Quartus II Help.
+Info: Quartus II 64-Bit Simulator was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 342 megabytes
+    Info: Processing ended: Mon Oct 05 22:59:44 2020
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:03
+
+

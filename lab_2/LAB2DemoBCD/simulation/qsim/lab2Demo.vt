@@ -1,0 +1,287 @@
+// Copyright (C) 1991-2013 Altera Corporation
+// Your use of Altera Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Altera Program License 
+// Subscription Agreement, Altera MegaCore Function License 
+// Agreement, or other applicable license agreement, including, 
+// without limitation, that your use is for the sole purpose of 
+// programming logic devices manufactured by Altera and sold by 
+// Altera or its authorized distributors.  Please refer to the 
+// applicable agreement for further details.
+
+// *****************************************************************************
+// This file contains a Verilog test bench with test vectors .The test vectors  
+// are exported from a vector file in the Quartus Waveform Editor and apply to  
+// the top level entity of the current Quartus project .The user can use this   
+// testbench to simulate his design using a third-party simulation tool .       
+// *****************************************************************************
+// Generated on "10/06/2020 13:33:09"
+                                                                        
+// Verilog Self-Checking Test Bench (with test vectors) for design :    BCD
+// 
+// Simulation tool : 3rd Party
+// 
+
+`timescale 1 ps/ 1 ps
+module BCD_vlg_sample_tst(
+	CLK,
+	RESETBCD,
+	sampler_tx
+);
+input  CLK;
+input  RESETBCD;
+output sampler_tx;
+
+reg sample;
+time current_time;
+always @(CLK or RESETBCD)
+                                                                                
+begin                                                 
+ if ($realtime > 0)                                   
+ begin                                                
+	if ($realtime == 0 || $realtime != current_time)  
+	begin									          
+		if (sample === 1'bx)                          
+			sample = 0;                               
+		else                                          
+			sample = ~sample;                         
+	end										          
+	current_time = $realtime;					      
+ end                                                  
+end                                                   
+
+assign sampler_tx = sample;
+endmodule
+
+module BCD_vlg_check_tst (
+	BQ0,
+	BQ1,
+	BQ2,
+	BQ3,
+	sampler_rx
+);
+input  BQ0;
+input  BQ1;
+input  BQ2;
+input  BQ3;
+input sampler_rx;
+
+reg  BQ0_expected;
+reg  BQ1_expected;
+reg  BQ2_expected;
+reg  BQ3_expected;
+
+reg  BQ0_prev;
+reg  BQ1_prev;
+reg  BQ2_prev;
+reg  BQ3_prev;
+
+reg  BQ0_expected_prev;
+reg  BQ1_expected_prev;
+reg  BQ2_expected_prev;
+reg  BQ3_expected_prev;
+
+reg  last_BQ0_exp;
+reg  last_BQ1_exp;
+reg  last_BQ2_exp;
+reg  last_BQ3_exp;
+
+reg trigger;
+
+integer i;
+integer nummismatches;
+
+reg [1:4] on_first_change ;
+
+
+initial
+begin
+trigger = 0;
+i = 0;
+nummismatches = 0;
+on_first_change = 4'b1;
+end
+
+// update real /o prevs
+
+always @(trigger)
+begin
+	BQ0_prev = BQ0;
+	BQ1_prev = BQ1;
+	BQ2_prev = BQ2;
+	BQ3_prev = BQ3;
+end
+
+// update expected /o prevs
+
+always @(trigger)
+begin
+	BQ0_expected_prev = BQ0_expected;
+	BQ1_expected_prev = BQ1_expected;
+	BQ2_expected_prev = BQ2_expected;
+	BQ3_expected_prev = BQ3_expected;
+end
+
+
+
+// expected BQ3
+initial
+begin
+	BQ3_expected = 1'bX;
+end 
+
+// expected BQ2
+initial
+begin
+	BQ2_expected = 1'bX;
+end 
+
+// expected BQ1
+initial
+begin
+	BQ1_expected = 1'bX;
+end 
+
+// expected BQ0
+initial
+begin
+	BQ0_expected = 1'bX;
+end 
+// generate trigger
+always @(BQ0_expected or BQ0 or BQ1_expected or BQ1 or BQ2_expected or BQ2 or BQ3_expected or BQ3)
+begin
+	trigger <= ~trigger;
+end
+
+always @(posedge sampler_rx or negedge sampler_rx)
+begin
+`ifdef debug_tbench
+	$display("Scanning pattern %d @time = %t",i,$realtime );
+	i = i + 1;
+	$display("| expected BQ0 = %b | expected BQ1 = %b | expected BQ2 = %b | expected BQ3 = %b | ",BQ0_expected_prev,BQ1_expected_prev,BQ2_expected_prev,BQ3_expected_prev);
+	$display("| real BQ0 = %b | real BQ1 = %b | real BQ2 = %b | real BQ3 = %b | ",BQ0_prev,BQ1_prev,BQ2_prev,BQ3_prev);
+`endif
+	if (
+		( BQ0_expected_prev !== 1'bx ) && ( BQ0_prev !== BQ0_expected_prev )
+		&& ((BQ0_expected_prev !== last_BQ0_exp) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port BQ0 :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", BQ0_expected_prev);
+		$display ("     Real value = %b", BQ0_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_BQ0_exp = BQ0_expected_prev;
+	end
+	if (
+		( BQ1_expected_prev !== 1'bx ) && ( BQ1_prev !== BQ1_expected_prev )
+		&& ((BQ1_expected_prev !== last_BQ1_exp) ||
+			on_first_change[2])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port BQ1 :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", BQ1_expected_prev);
+		$display ("     Real value = %b", BQ1_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[2] = 1'b0;
+		last_BQ1_exp = BQ1_expected_prev;
+	end
+	if (
+		( BQ2_expected_prev !== 1'bx ) && ( BQ2_prev !== BQ2_expected_prev )
+		&& ((BQ2_expected_prev !== last_BQ2_exp) ||
+			on_first_change[3])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port BQ2 :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", BQ2_expected_prev);
+		$display ("     Real value = %b", BQ2_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[3] = 1'b0;
+		last_BQ2_exp = BQ2_expected_prev;
+	end
+	if (
+		( BQ3_expected_prev !== 1'bx ) && ( BQ3_prev !== BQ3_expected_prev )
+		&& ((BQ3_expected_prev !== last_BQ3_exp) ||
+			on_first_change[4])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port BQ3 :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", BQ3_expected_prev);
+		$display ("     Real value = %b", BQ3_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[4] = 1'b0;
+		last_BQ3_exp = BQ3_expected_prev;
+	end
+
+	trigger <= ~trigger;
+end
+initial 
+
+begin 
+$timeformat(-12,3," ps",6);
+#1000000;
+if (nummismatches > 0)
+	$display ("%d mismatched vectors : Simulation failed !",nummismatches);
+else
+	$display ("Simulation passed !");
+$finish;
+end 
+endmodule
+
+module BCD_vlg_vec_tst();
+// constants                                           
+// general purpose registers
+reg CLK;
+reg RESETBCD;
+// wires                                               
+wire BQ0;
+wire BQ1;
+wire BQ2;
+wire BQ3;
+
+wire sampler;                             
+
+// assign statements (if any)                          
+BCD i1 (
+// port map - connection between master ports and signals/registers   
+	.BQ0(BQ0),
+	.BQ1(BQ1),
+	.BQ2(BQ2),
+	.BQ3(BQ3),
+	.CLK(CLK),
+	.RESETBCD(RESETBCD)
+);
+
+// CLK
+always
+begin
+	CLK = 1'b0;
+	CLK = #10000 1'b1;
+	#10000;
+end 
+
+// RESETBCD
+initial
+begin
+	RESETBCD = 1'b1;
+end 
+
+BCD_vlg_sample_tst tb_sample (
+	.CLK(CLK),
+	.RESETBCD(RESETBCD),
+	.sampler_tx(sampler)
+);
+
+BCD_vlg_check_tst tb_out(
+	.BQ0(BQ0),
+	.BQ1(BQ1),
+	.BQ2(BQ2),
+	.BQ3(BQ3),
+	.sampler_rx(sampler)
+);
+endmodule
+
